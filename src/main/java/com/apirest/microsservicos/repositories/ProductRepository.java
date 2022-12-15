@@ -35,7 +35,7 @@ public class ProductRepository{
 		return product;
 	}
 	
-	public void deletById(Integer id) {
+	public void deleteById(Integer id) {
 		products.removeIf(product -> product.getId() == id);
 	}
 	
@@ -45,14 +45,11 @@ public class ProductRepository{
 		if (returnProduct.isEmpty())
 			throw new InputMismatchException("Produto não encontrado");
 		
-		deletById(product.getId());
+		deleteById(product.getId());
 		
 		products.add(product);
 		
 		return product;
-		
-		
-			
 		
 	}
 	

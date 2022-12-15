@@ -28,8 +28,8 @@ public class ProductService {
 		return product;
 	}
 	
-	public void deletById(Integer id) {
-		repo.deletById(id);
+	public void deleteById(Integer id) {
+		repo.deleteById(id);
 	}
 	
 	public Product update(Integer id, Product product) {

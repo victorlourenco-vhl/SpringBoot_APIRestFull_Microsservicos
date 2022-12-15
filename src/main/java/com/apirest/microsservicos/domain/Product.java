@@ -48,8 +48,4 @@ public class Product {
 		this.observation = observation;
 	}
 	
-	
-	
-	
-	
 }
