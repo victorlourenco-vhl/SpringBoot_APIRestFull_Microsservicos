@@ -1,13 +1,13 @@
 package com.apirest.microsservicos.repositories;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
 import com.apirest.microsservicos.domain.Product;
+import com.apirest.microsservicos.resources.exception.ResourceNotFoundException;
 
 @Repository
 public class ProductRepository{
@@ -43,7 +43,7 @@ public class ProductRepository{
 		Optional<Product> returnProduct =  getById(product.getId());
 		
 		if (returnProduct.isEmpty())
-			throw new InputMismatchException("Produto não encontrado");
+			throw new ResourceNotFoundException("Produto não encontrado");
 		
 		deleteById(product.getId());
 		
