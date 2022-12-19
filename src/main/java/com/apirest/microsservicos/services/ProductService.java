@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.apirest.microsservicos.domain.Product;
-import com.apirest.microsservicos.repositories.ProductRepository;
+import com.apirest.microsservicos.repositories.ProductRepositoryOld;
 
 @Service
 public class ProductService {
 	
 	@Autowired
-	private ProductRepository repo;
+	private ProductRepositoryOld repo;
 	
 	public List<Product> getAll(){
 		return repo.getAll();
